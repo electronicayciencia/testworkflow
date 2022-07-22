@@ -1,6 +1,8 @@
 name: Tryone
 on:
   push
+    tags:
+      - "*"
 
 jobs:
   job1:
@@ -17,9 +19,5 @@ jobs:
           python-version: 3.9
       - name: Cat README
         run: |
-          env
-          ls -latr
-          cat README.md
-          git describe --tags
           sed -i "s/_GIT_VERSION_/$(git describe --tags)/" README.md
           cat README.md
