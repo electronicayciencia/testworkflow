@@ -16,9 +16,15 @@ We are in
     $ git describe --tags
     v1.0.3-1-g1f80e6b
 
+In orger to have tags for `git describe`, this is needed:
+
+    with:
+      fetch-depth: 0
 
 
 Let's say this is a placeholder for version:
 
 Version: _GIT_VERSION_
+
+
 

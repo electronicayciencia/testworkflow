@@ -21,3 +21,5 @@ jobs:
           ls -latr
           cat README.md
           git describe --tags
+          sed -i "s/_GIT_VERSION_/$(git describe --tags)/" README.md
+          cat README.md
