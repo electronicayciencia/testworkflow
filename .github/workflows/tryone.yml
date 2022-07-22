@@ -9,12 +9,15 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
           python-version: 3.9
       - name: Cat README
         run: |
-          ls
-          git describe --tags
+          env
+          ls -latr
           cat README.md
+          git describe --tags
