@@ -17,3 +17,8 @@ We are in
     v1.0.3-1-g1f80e6b
 
 
+
+Let's say this is a placeholder for version:
+
+Version: _GIT_VERSION_
+
