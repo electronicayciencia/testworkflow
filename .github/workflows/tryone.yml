@@ -1,8 +1,7 @@
 name: Tryone
 on:
   push:
-    tags:
-      - "*"
+
 
 jobs:
   job1:
@@ -19,5 +18,6 @@ jobs:
           python-version: 3.9
       - name: Cat README
         run: |
-          sed -i "s/_GIT_VERSION_/$(git describe --tags)/" README.md
+          V=$(git describe --tags | tr -d 'v' | tr '-' '.' | cut -d'.' -f 1-4)
+          sed -i "s/_GIT_VERSION_/$V/" README.md
           cat README.md
