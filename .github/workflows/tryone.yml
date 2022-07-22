@@ -1,6 +1,6 @@
 name: Tryone
 on:
-  push
+  push:
     tags:
       - "*"
 
